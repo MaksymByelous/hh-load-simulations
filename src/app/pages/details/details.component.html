@@ -1,0 +1,24 @@
+<div class="container-fluid" *ngIf="simulationData; else noData">
+  <h3>{{ simulationData?.type }}</h3>
+  <h5>Household Availabilities</h5>
+  <div class="row">
+    <div *ngFor="let availability of simulationData?.availabilities" class="col-lg-6">
+      <app-availability-table [availability]="availability"></app-availability-table>
+    </div>
+  </div>
+  <h5>Household Appliances</h5>
+  <div class="appliances-table-wrapper">
+    <app-appliances-table [appliances]="simulationData?.appliances"></app-appliances-table>
+  </div>
+
+  <h6 class="text-center">Household Load Curve Chart</h6>
+  <div class="row">
+    <div class="col-12">
+      <app-load-result-curve [chartData]="simulationData?.resultLoadCurve?.measurements"> </app-load-result-curve>
+    </div>
+  </div>
+</div>
+
+<ng-template #noData>
+  <h2 class="text-center">No data found</h2>
+</ng-template>

@@ -1,0 +1,16 @@
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Activity</th>
+      <th>Start</th>
+      <th>End</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let activity of availability?.activities">
+      <td>{{ activity?.name }}</td>
+      <td>{{ activity?.start?.$date | date: 'shortTime' }}</td>
+      <td>{{ activity?.end?.$date | date: 'shortTime' }}</td>
+    </tr>
+  </tbody>
+</table>

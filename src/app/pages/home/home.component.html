@@ -1,0 +1,14 @@
+<h1 class="text-center">
+  <span translate>Report</span>
+</h1>
+<div class="container">
+  <div class="list-group">
+    <a
+      *ngFor="let simulation of data"
+      [routerLink]="['/details', simulation._id.$oid]"
+      class="list-group-item list-group-item-action"
+    >
+      {{ simulation?.simName }} ({{ simulation?.type }})
+    </a>
+  </div>
+</div>
