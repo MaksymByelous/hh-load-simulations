@@ -1,9 +1,9 @@
-#Shot technical description of the task
+# Shot technical description of the task
 To create project and functionality are used Angular/Cli and Typescript.
 To create html layout Bootstrap library is used.
 For Curve chart I use Google Charts(Dual-Y Charts)
 
-#Web UI
+# Web UI
 Entry point is Login page - put any login and password and you are on Home page.
 Home Page's content is report with list of household’s electrical load simulations.
 Clicking on any of simulations you able to go Details page. On this page you will find tables with statistics and chart.
